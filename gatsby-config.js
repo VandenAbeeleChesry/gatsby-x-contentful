@@ -23,5 +23,15 @@ module.exports = {
         accessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `open sans`,
+          `open sans\:300,400,700`  
+        ],
+        display: 'swap', 
+      },
+    },
   ],
 }
