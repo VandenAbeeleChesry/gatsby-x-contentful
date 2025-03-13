@@ -5,6 +5,9 @@ import { graphql, Link } from "gatsby";
 // Gatsby image plugin (zonder plugin kunnnen we de url in src zetten)
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
+import Seo from '../seo';
+export const Head = () => <Seo pageTitle="Blogs detail" />
+
 const BlogDetail = ({data}) => {  
     const image = getImage(data.contentfulBlogs.imageBlog);    
     return (
