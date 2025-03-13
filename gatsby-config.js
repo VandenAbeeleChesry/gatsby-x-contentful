@@ -1,6 +1,12 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
- */
+*/
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`
+});
+
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby x Contentful`,
@@ -13,8 +19,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `m6oq7eep1tab`, 
-        accessToken: `BEvBk-LPwC6XnQw9-hoTimRREuOY0F35sIgQRWPAH4k`, 
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_DELIVERY_ACCESS_TOKEN
       },
     },
   ],
